@@ -7,7 +7,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
 from pagination import InlinePagination
 
-token = "1515876167:AAF_Ql_1JFwaGcWxE7aoJHH2xHAoaXPrBRU"
+token = ""
 bot = Bot(token=token, parse_mode="HTML", disable_web_page_preview=True)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
