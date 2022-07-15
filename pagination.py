@@ -39,7 +39,7 @@ class InlinePagination:
 
     def get_page_buttons(self, page_data: list) -> List[InlineKeyboardButton]:
         return [
-            InlineKeyboardButton(callback_data=self.func_name(data), text=self.func_callback(data))
+            InlineKeyboardButton(callback_data=self.callback_prefix + str(self.func_name(data)), text=self.func_callback(data))
             for data in page_data
         ]
 
