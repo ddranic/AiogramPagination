@@ -5,7 +5,7 @@
 ---
 ### Usage
 
-```
+```python
 @dp.message_handler(commands=["start"])
 async def start(message: types.Message):
     pagination = InlinePagination(button_datas=[(i, 2) for i in range(1, 100)], width=4)
@@ -29,7 +29,7 @@ This is a simple example of the library. Let's run through all pagintaion types:
 + You dont need to split `call.data`, just make `cur_page=call.data` and it will be formatted. 
  
 ##### Here is an example.
-```
+```python
 @dp.callback_query_handler(lambda c: c.data.startswith("n_"))
 async def next(call: types.CallbackQuery):
     pagination = InlinePagination(button_datas=[(i, 2) for i in range(1, 100)], width=4)
